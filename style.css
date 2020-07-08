@@ -1,0 +1,119 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #333;
+}
+.bgcard {
+    background-image: url(3653.jpg);
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.card-wrapper {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.card {
+    width: 350px;
+    height: 450px;
+    box-shadow: 0 5px 18px rgba(0,0,0, .6);
+    cursor: pointer;
+}
+.card:hover span {
+    opacity: .4;
+    transition: .5s;
+}
+.card-image span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: .5s;
+}
+.card-image {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    transition: .5s;
+}
+.social-icons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    display: flex;
+}
+.social-icons li{
+    list-style: none;
+}
+.social-icons li a{
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    line-height: 50px;
+    text-align: center;
+    background-color: #fff;
+    margin: 0 6px;
+    transition: .4s;
+    transform: translateY(200px);
+    opacity: 0;
+}
+.card:hover .social-icons li a {
+    transform: translateY(0);
+    opacity: 1;
+}
+.social-icons li a:hover{
+    background-color: #000;
+    transition: .2s;
+    color: #fff;
+}
+.social-icons li a i {
+    transition: .8s;
+}
+.social-icons li a:hover i {
+    transform: rotateY(360deg);
+}
+.details {
+    position: absolute;
+    bottom: -120px;
+    left: 0;
+    background-color: rgba(255,255,255, .8);
+    width: 100%;
+    height: 120px;
+    z-index: 1;
+    padding: 10px;
+    opacity: 0;
+}
+.card:hover .details {
+    bottom: 0;
+    transition-delay: .5s;
+    opacity: 1;
+}
+.card:hover .card-image span {
+    transform: rotateY(180deg);
+}
+.details h2 {
+    margin: 30px 0;
+    text-align: center;
+}
+.details h2 .job-title {
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 2.5rem;
+    color: #333;
+    display: block;
+}
